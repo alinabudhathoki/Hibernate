@@ -11,7 +11,7 @@
         <property name="show_sql">true</property>
         <property name="format_sql">false</property>
          <property name="hbm2ddl.auto">create</property>
-        <mapping class="com.hibernate.onetoone.Student"/>
-        <mapping class="com.hibernate.onetoone.Department"/>
+        <mapping class="com.hibernate.manytomany.StudentCourse"/>
+        <mapping class="com.hibernate.manytomany.Subject"/>
     </session-factory>
 </hibernate-configuration>

@@ -31,10 +31,10 @@ public class StudentMain {
 		Session session = sf.openSession();
 		session.beginTransaction();
 
-		String queryString = "from Student";
+		String queryString = "from Department";
 		Query query = session.createQuery(queryString);
-		List<Student> result = query.list();
-		for (Student c : result) {
+		List<Department> result = query.list();
+		for (Department c : result) {
 			System.out.println(c.toString());
 		}
 	}

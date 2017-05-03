@@ -66,6 +66,11 @@ public class EmployeeInfo {
 		this.phone = phone;
 	}
 
+	@Override
+	public String toString() {
+		return "EmployeeInfo [id=" + id + ", name=" + name + ", salary=" + salary + ", phone=" + phone + "]";
+	}
+
 	
 	
 

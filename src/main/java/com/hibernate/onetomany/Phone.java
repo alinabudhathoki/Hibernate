@@ -48,4 +48,11 @@ public class Phone {
 		this.type = type;
 	}
 
+	@Override
+	public String toString() {
+		return "Phone [id=" + id + ", number=" + number + ", type=" + type + "]";
+	}
+	
+	
+
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 public class EmployeeInfoMain {
 	SessionFactory sf = new Configuration().configure().buildSessionFactory();
@@ -29,9 +30,22 @@ public class EmployeeInfoMain {
 		session.close();
 	}
 
+	@SuppressWarnings({ "rawtypes", "deprecation", "unchecked" })
+	public void select() {
+		Session session = sf.openSession();
+		session.beginTransaction();
+
+		String queryString = "from EmployeeInfo";
+		Query query = session.createQuery(queryString);
+		List<EmployeeInfo> result = query.list();
+		for (EmployeeInfo c : result) {
+			System.out.println(c.toString());
+		}
+	}
+
 	public static void main(String[] args) {
 		EmployeeInfoMain employee = new EmployeeInfoMain();
 		employee.insert();
-
+		employee.select();
 	}
 }
