@@ -29,5 +29,5 @@ compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.6.Final'
 }
 
 // Define the main class for the application
-mainClassName = 'com.hibernate.manytomany.StudentCourseMain'
+mainClassName = 'com.hibernate.onetoone.bidirectional.StudentMain'
 
